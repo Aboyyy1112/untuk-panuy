@@ -48,14 +48,14 @@ html,body{overscroll-behavior:none}
 <div class="hud"><div class="pill" id="count">♥ 0 / 8</div><div class="pill" id="status">KUMPULKAN SEMUA HATI</div></div>
 <div class="overlay" id="startScreen">
  <div class="panel"><h2>Selamat datang, sayang</h2>
- <p>Di taman senja ini tersebar 8 hati. Setiap hati menyimpan satu bisikan cinta. Kumpulkan semuanya, lalu temui seseorang yang menunggumu di gerbang.</p>
+ <p>Di taman senja ini tersebar 8 hati. Setiap hati menyimpan satu bisikan cinta. Kumpulkan semuanya, lalu temui papoyy yang menunggumu di gerbang.</p>
  <p>Hindari semak mawar berduri ya.</p>
  <label for="nm" style="font-size:13px">Untuk siapa petualangan ini?</label>
  <input id="nm" maxlength="20" placeholder="Nama orang tersayang" autocomplete="off">
  <button class="main-btn" id="startBtn">Mulai petualangan ♥</button></div>
 </div>
 <div class="overlay" id="endScreen" style="display:none">
- <div class="panel"><h2 id="endTitle">Kamu berhasil</h2><p id="endText"></p><p class="letter">“Sejauh apa pun perjalanan,<br>hatiku selalu tahu ke mana harus pulang.<br>Dan hari ini, pulangku adalah kamu.”</p><p id="endSign" class="letter"></p><button class="main-btn" id="againBtn">Main lagi ♥</button></div>
+ <div class="panel"><h2 id="endTitle">Kamu berhasil</h2><p id="endText"></p><p class="letter">“Selagi aku masih ada,<br>Kamu gak perlu merasa sendirian.<br>karena aku akan menjaga dan membahagiakanmu.”</p><p id="endSign" class="letter"></p><button class="main-btn" id="againBtn">Main lagi ♥</button></div>
 </div>
 </div>
 <div class="controls">
@@ -78,7 +78,7 @@ const keys={up:false,down:false,left:false,right:false};
 let started=false,won=false,hearts=[],collected=0,player,toast='',toastTimer=0,pname='',parts=[],petals=[],tick=0,ac,camX=0;
 const obstacles=[[4,2],[4,3],[4,4],[8,1],[8,2],[8,3],[12,5],[13,5],[14,5],[17,2],[17,3],[17,4],[20,8],[19,8],[18,8],[6,10],[7,10],[8,10],[11,11],[12,11],[13,11],[3,7],[3,8],[3,9]];
 const heartSpots=[[2,2],[6,4],[10,2],[15,3],[22,3],[5,8],[11,8],[16,11]];
-const notes=['Kamu mengubah hari biasa jadi istimewa','Senyummu adalah rumah ternyaman','Bersamamu, waktu terasa melambat','Terima kasih sudah selalu ada','Tawamu musik favoritku','Aku suka caramu peduli pada hal kecil','Kamu alasanku percaya pada cinta','Dan aku memilihmu, hari ini dan selamanya'];
+const notes=['Panuuyy mengubah hari biasaku jadi istimewa','Senyummu panuy adalah rumah ternyaman','Bersama panuy, waktu terasa melambat','Terima kasih sudah selalu ada','Dan aku minta maaf jika sering mengecewakan panuy','Aku sangatt sayang ama panuyy lebih dari siapapun','panuyy buat aku percaya pada cinta','Dan aku memilih panuyy, hari ini dan selamanya'];
 const gate={x:23*T+4,y:6*T+4,w:24,h:48};
 const partner={x:700,y:196};
 for(let i=0;i<34;i++)petals.push({x:Math.random()*W,y:Math.random()*H,vx:.3+Math.random()*.5,vy:.4+Math.random()*.6,p:Math.random()*6,c:i%3});
